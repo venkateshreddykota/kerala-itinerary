@@ -74,3 +74,40 @@ footer {
   background-color: #004d40;
   color: white;
 }
+
+
+.scrolling-images {
+  overflow: hidden;
+  white-space: nowrap;
+  background: linear-gradient(to right, #dff3ff, #f4fcff);
+  padding: 10px 0;
+  margin-top: 20px;
+}
+
+.image-track {
+  display: inline-block;
+  animation: scroll-left 40s linear infinite;
+}
+
+.image-track img {
+  width: 300px;
+  height: 200px;
+  margin: 0 15px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.image-track img:hover {
+  transform: scale(1.05);
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
