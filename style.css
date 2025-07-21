@@ -1,85 +1,76 @@
 body {
   margin: 0;
   font-family: 'Segoe UI', sans-serif;
-  background: linear-gradient(to bottom, #e0f7fa, #e0f2f1);
-  color: #333;
+  background: linear-gradient(to bottom, #e0f7fa, #ffffff);
+  color: #003366;
+  text-align: center;
 }
 
 header {
-  text-align: center;
-  padding: 2rem;
-  background: url('alleppey.jpg') no-repeat center center/cover;
+  padding: 30px 20px;
+  background-color: #00796b;
   color: white;
-  text-shadow: 2px 2px 4px #000;
 }
 
 header h1 {
-  font-size: 3rem;
-  margin-bottom: 0.5rem;
+  margin: 0;
+  font-size: 36px;
 }
 
 header p {
-  font-size: 1.2rem;
-  margin: 0.5rem 0;
+  margin: 5px 0 20px;
+  font-size: 18px;
 }
 
-.btn {
-  background: #ff5722;
-  color: white;
-  padding: 0.7rem 1.2rem;
-  border: none;
+.download-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #ffc107;
+  color: #000;
   text-decoration: none;
-  border-radius: 5px;
   font-weight: bold;
-  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
+  border-radius: 6px;
+  box-shadow: 2px 2px 5px #555;
 }
 
-.btn:hover {
-  background: #e64a19;
+.download-btn:hover {
+  background-color: #ff9800;
 }
 
-.places {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  padding: 2rem;
-  gap: 1.5rem;
-}
-
-.card {
-  background: white;
-  border-radius: 10px;
+.image-slider {
+  margin: 40px 0;
   overflow: hidden;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-  max-width: 280px;
-  text-align: center;
-  transition: transform 0.3s;
+  position: relative;
+  height: 250px;
 }
 
-.card:hover {
-  transform: scale(1.05);
+.slider-track {
+  display: flex;
+  width: calc(250px * 10);
+  animation: scroll-left 40s linear infinite;
 }
 
-.card img {
-  width: 100%;
-  height: 180px;
+.slider-track img {
+  width: 250px;
+  height: 250px;
   object-fit: cover;
+  margin-right: 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
 }
 
-.card h2 {
-  color: #009688;
-  margin: 1rem 0 0.5rem;
-}
-
-.card p {
-  padding: 0 1rem 1rem;
-  font-size: 0.95rem;
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-1250px);
+  }
 }
 
 footer {
-  background: #004d40;
+  margin-top: 50px;
+  padding: 20px;
+  background-color: #004d40;
   color: white;
-  text-align: center;
-  padding: 1rem;
-  font-size: 0.9rem;
 }
