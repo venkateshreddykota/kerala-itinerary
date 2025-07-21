@@ -1,113 +1,76 @@
 body {
   margin: 0;
   font-family: 'Segoe UI', sans-serif;
-  background: linear-gradient(to bottom, #e0f7fa, #ffffff);
-  color: #003366;
-  text-align: center;
+  background: linear-gradient(to right, #e0f7fa, #ffffff);
+  color: #003c40;
 }
 
 header {
-  padding: 30px 20px;
-  background-color: #00796b;
+  text-align: center;
+  padding: 30px;
+  background: #00796b;
   color: white;
-}
-
-header h1 {
-  margin: 0;
-  font-size: 36px;
-}
-
-header p {
-  margin: 5px 0 20px;
-  font-size: 18px;
 }
 
 .download-btn {
   display: inline-block;
+  margin-top: 15px;
   padding: 10px 20px;
-  background-color: #ffc107;
+  background-color: #ffca28;
   color: #000;
   text-decoration: none;
+  border-radius: 5px;
   font-weight: bold;
-  border-radius: 6px;
-  box-shadow: 2px 2px 5px #555;
 }
 
-.download-btn:hover {
-  background-color: #ff9800;
+.pdf-btn {
+  background-color: #009688;
+  color: #fff;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
 }
 
-.image-slider {
-  margin: 40px 0;
-  overflow: hidden;
-  position: relative;
-  height: 250px;
-}
-
-.slider-track {
-  display: flex;
-  width: calc(250px * 10);
-  animation: scroll-left 40s linear infinite;
-}
-
-.slider-track img {
-  width: 250px;
-  height: 250px;
-  object-fit: cover;
-  margin-right: 15px;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
-}
-
-@keyframes scroll-left {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-1250px);
-  }
+.centered-pdf-button {
+  text-align: center;
+  margin: 30px;
 }
 
 footer {
-  margin-top: 50px;
+  text-align: center;
   padding: 20px;
   background-color: #004d40;
   color: white;
 }
 
-
 .scrolling-images {
   overflow: hidden;
   white-space: nowrap;
-  background: linear-gradient(to right, #dff3ff, #f4fcff);
-  padding: 10px 0;
-  margin-top: 20px;
+  background: #e0f2f1;
+  padding: 20px 0;
+  border-top: 2px solid #009688;
+  border-bottom: 2px solid #009688;
 }
 
 .image-track {
   display: inline-block;
-  animation: scroll-left 40s linear infinite;
+  animation: scroll 30s linear infinite;
 }
 
 .image-track img {
   width: 300px;
   height: 200px;
-  margin: 0 15px;
+  margin: 0 10px;
   border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
 }
 
-.image-track img:hover {
-  transform: scale(1.05);
-}
-
-@keyframes scroll-left {
-  0% {
+@keyframes scroll {
+  from {
     transform: translateX(100%);
   }
-  100% {
+  to {
     transform: translateX(-100%);
   }
 }
-
